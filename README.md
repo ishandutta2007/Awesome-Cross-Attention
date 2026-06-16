@@ -48,5 +48,19 @@ In standard cross-attention, your **Queries (Q)** originate from one source, whi
 * [Visual Guide to Attention Variants](https://sebastianraschka.com) — A deep dive into the visual and mathematical nuances.
 * [GeeksforGeeks: Types of Attention Mechanism](https://geeksforgeeks.org) — Practical implementation details for NLP.
 
+---
+
+## 📈 Star History
+
+<div align="center">
+   <a href="https://www.star-history.com/#ishandutta2007/Awesome-Cross-Attention&Date">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Cross-Attention&type=Date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Cross-Attention&type=Date" />
+      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Cross-Attention&type=Date" />
+    </picture>
+   </a>
+</div>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
