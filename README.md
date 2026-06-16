@@ -7,18 +7,23 @@ Cross-attention enables one data sequence (e.g., text) to query information from
 
 ## 🛠️ Top Variants of Cross-Attention
 
-* **Cross-Layer Attention (CLA):** Shares the same Keys (K) and Values (V) across multiple sequential decoder layers rather than recalculating them. This drastically reduces the KV cache size, memory footprint, and overall compute requirements in large models.
-* **Gated Cross-Attention (GCA):** Fuses heterogeneous modalities (like audio and text) by applying learnable gating functions (e.g., sigmoid activations) to the attended features. This dynamically filters and controls what information passes through, resulting in cleaner, context-aware outputs.
-* **Distributed Cross-Attention (e.g., LV-XAttn):** Tailored for extreme sequence lengths, such as high-resolution video inputs in Vision-Language Models (VLMs). It offloads massive KV blocks into distributed network fragments, accelerating inference times without hitting communication bottlenecks.
-* **Multi-Modal Cross-Attention:** A category of variants (like Dual-Cross-Attention) built for single-cell multi-omics or visual question answering. It simultaneously processes reciprocal Queries from multiple modalities to build deeper inter-sequence dependencies.
+| Variant | Description | Year | Paper Link |
+| :--- | :--- | :--- | :--- |
+| **Cross-Layer Attention (CLA)** | Shares the same Keys (K) and Values (V) across multiple sequential decoder layers rather than recalculating them. This drastically reduces the KV cache size, memory footprint, and overall compute requirements in large models. | 2024 | [Reducing Transformer Key-Value Cache Size with Cross-Layer Attention](https://arxiv.org/abs/2405.12981) |
+| **Gated Cross-Attention (GCA)** | Fuses heterogeneous modalities (like audio and text) by applying learnable gating functions (e.g., sigmoid activations) to the attended features. This dynamically filters and controls what information passes through, resulting in cleaner, context-aware outputs. | 2022 | [Flamingo: a Visual Language Model for Few-Shot Learning](https://arxiv.org/abs/2204.14198) |
+| **Distributed Cross-Attention (e.g., LV-XAttn)** | Tailored for extreme sequence lengths, such as high-resolution video inputs in Vision-Language Models (VLMs). It offloads massive KV blocks into distributed network fragments, accelerating inference times without hitting communication bottlenecks. | 2025 | [LV-XAttn: Distributed Cross-Attention for Long Visual Inputs in Multimodal Large Language Models](https://arxiv.org/abs/2502.02406) |
+| **Multi-Modal Cross-Attention** | A category of variants (like Dual-Cross-Attention) built for single-cell multi-omics or visual question answering. It simultaneously processes reciprocal Queries from multiple modalities to build deeper inter-sequence dependencies. | 2025 | [scDiffusion-X](https://www.biorxiv.org/content/10.1101/2025.02.27.640020v1) |
 
 ---
 
 ## 📊 Architectural Differences
 
 In standard cross-attention, your **Queries (Q)** originate from one source, while **Keys (K)** and **Values (V)** originate from another. The specialized variants improve upon this baseline in two distinct ways:
-1. **Memory Optimization:** Reducing hardware overhead for long sequences (e.g., CLA, LV-XAttn).
-2. **Feature Fusion Quality:** Enhancing how well completely different data types blend together (e.g., GCA).
+
+| Focus Area | Description | Year | Paper Link |
+| :--- | :--- | :--- | :--- |
+| **Memory Optimization** | Reducing hardware overhead for long sequences (e.g., CLA, LV-XAttn). | 2024 | [Reducing Transformer Key-Value Cache Size with Cross-Layer Attention](https://arxiv.org/abs/2405.12981) |
+| **Feature Fusion Quality** | Enhancing how well completely different data types blend together (e.g., GCA). | 2022 | [Flamingo: a Visual Language Model for Few-Shot Learning](https://arxiv.org/abs/2204.14198) |
 
 ---
 
